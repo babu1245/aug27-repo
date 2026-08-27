@@ -1,0 +1,24 @@
+# Configure Azure Provider
+provider "azurerm" {
+  # Version is optional
+  # Terraform recommends to pin to a specific version of provide
+  #version = "=2.35.0"
+  #version = "~>2.35.0"
+  subscription_id = "cf19903f-e848-4ff7-95a9-22adbb2408f5"
+  features {}
+}
+
+
+# Create a Azure Resource Group
+resource "azurerm_resource_group" "example" {
+  name     = "aug-terraformrg1"
+  location = "West US"
+
+# Add Tags
+#  tags = {
+#    "environment" = "k8sdev"
+#
+#  }
+
+}
+fs
